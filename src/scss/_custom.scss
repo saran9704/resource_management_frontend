@@ -1,0 +1,139 @@
+// Here you can add other styles
+
+.header {
+  background-color: rgba(
+    var(--cui-light-rgb),
+    var(--cui-bg-opacity)
+  ) !important;
+}
+.zp-expand {
+  display: flex;
+  z-index: 99;
+}
+
+.zp-hmenu {
+  position: relative;
+  width: 2em;
+  height: 1em;
+  font-size: 15px;
+  cursor: pointer;
+  float: left;
+  margin: 1px 0px 2px 0px;
+}
+
+.zp-hmenu .item {
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: #555555a0;
+  border-radius: 4px;
+}
+
+.zp-hmenu .item:nth-child(1) {
+  top: 0;
+}
+
+.zp-hmenu .item:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+}
+
+.zp-expand.clicked .item:nth-child(2) {
+  left: -30%;
+}
+
+.zp-hmenu .item:nth-child(3) {
+  bottom: 0;
+}
+.header.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1029;
+  background-color: #ebebef;
+}
+
+
+.sidebar {
+  --cui-sidebar-width: 16rem;
+  --cui-sidebar-bg: #ffffff;
+  --cui-sidebar-padding-x: 0;
+  --cui-sidebar-padding-y: 0;
+  // --cui-sidebar-nav-link-content-active-icon-color:#fff;
+  --cui-sidebar-color: rgba(0, 0, 0, 0.87);
+  --cui-sidebar-border-width: 0;
+  --cui-sidebar-border-color: transparent;
+  --cui-sidebar-brand-color: rgb(0, 0, 0);
+  --cui-sidebar-brand-height: 4rem;
+  --cui-sidebar-brand-bg: rgb(255, 255, 255);
+  --cui-sidebar-header-height: 4rem;
+  --cui-sidebar-header-bg: rgb(255, 255, 255);
+  --cui-sidebar-header-padding-x: 1rem;
+  --cui-sidebar-header-padding-y: 0.75rem;
+  --cui-sidebar-footer-bg: rgb(255, 255, 255);
+  --cui-sidebar-footer-height: auto;
+  --cui-sidebar-footer-padding-x: 1rem;
+  --cui-sidebar-footer-padding-y: 0.75rem;
+  --cui-sidebar-toggler-bg: rgb(255, 255, 255);
+  --cui-sidebar-toggler-height: 3rem;
+
+  --cui-sidebar-toggler-indicator: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 14'%3E%3Cpath fill='%238a93a2' d='M9.148 2.352l-4.148 4.148 4.148 4.148q0.148 0.148 0.148 0.352t-0.148 0.352l-1.297 1.297q-0.148 0.148-0.352 0.148t-0.352-0.148l-5.797-5.797q-0.148-0.148-0.148-0.352t0.148-0.352l5.797-5.797q0.148-0.148 0.352-0.148t0.352 0.148l1.297 1.297q0.148 0.148 0.148 0.352t-0.148 0.352z'/%3E%3C/svg%3E");
+  --cui-sidebar-toggler-indicator-width: 5rem;
+  --cui-sidebar-toggler-indicator-height: 4rem;
+  --cui-sidebar-toggler-hover-bg: rgba(255, 255, 255, 0.3);
+  --cui-sidebar-toggler-indicator-hover: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 14'%3E%3Cpath fill='rgba%28255, 255, 255, 0.87%29' d='M9.148 2.352l-4.148 4.148 4.148 4.148q0.148 0.148 0.148 0.352t-0.148 0.352l-1.297 1.297q-0.148 0.148-0.352 0.148t-0.352-0.148l-5.797-5.797q-0.148-0.148-0.148-0.352t0.148-0.352l5.797-5.797q0.148-0.148 0.352-0.148t0.352 0.148l1.297 1.297q0.148 0.148 0.148 0.352t-0.148 0.352z'/%3E%3C/svg%3E");
+  --cui-sidebar-narrow-width: 4rem;
+  --cui-sidebar-nav-title-padding-x: 1rem;
+  --cui-sidebar-nav-title-padding-y: 0.75rem;
+  --cui-sidebar-nav-title-margin-top: 1rem;
+  --cui-sidebar-nav-title-color:  #52B3A6;
+
+  --cui-sidebar-nav-link-padding-x: 1rem;
+  --cui-sidebar-nav-link-padding-y: 0.8445rem;
+  --cui-sidebar-nav-link-color:rgba(8, 8, 8, 0.736);
+  --cui-sidebar-nav-link-color-hover:#0d6efd;
+  // --cui-sidebar-nav-link-bg: transparent;
+  // --cui-sidebar-nav-link-border-color: transparent;
+  --cui-sidebar-nav-link-border: 0 solid var(--cui-sidebar-nav-link-border-color);
+  --cui-sidebar-nav-link-border-radius: 0;
+  --cui-sidebar-nav-link-active-color:#fff;
+  --cui-sidebar-nav-link-active-icon-color:#fff;
+  --cui-sidebar-nav-link-active-bg:#0d6efd;
+
+  
+  --cui-sidebar-nav-link-active-icon-color:#fff;
+
+  --cui-sidebar-nav-link-hover-color:#fff;
+  --cui-sidebar-nav-link-hover-bg:#0d6efd;
+  --cui-sidebar-nav-link-hover-icon-color:#fff;
+  --cui-sidebar-nav-icon-width: 4rem;
+  --cui-sidebar-nav-icon-height: 1.25rem;
+  --cui-sidebar-nav-icon-font-size: 1.25rem;
+  --cui-sidebar-nav-link-icon-color: rgb(4, 4, 4);
+  --cui-sidebar-nav-group-bg: rgb(255, 255, 255);
+  --cui-sidebar-nav-group-items-padding-y: 0;
+  --cui-sidebar-nav-group-items-padding-x: 0;
+  --cui-sidebar-nav-group-toggle-show-color: #000000;
+  --cui-sidebar-nav-group-toggle-hover-color:white;
+  position: relative;
+  display: flex;
+  flex: 0 0 var(--cui-sidebar-width);
+  flex-direction: column;
+  order: -1;
+  width: var(--cui-sidebar-width);
+  padding: var(--cui-sidebar-padding-y) var(--cui-sidebar-padding-x);
+  color: var(--cui-sidebar-color);
+  background: var(--cui-sidebar-bg);
+  box-shadow: none;
+  transition: margin-left 0.15s, margin-right 0.15s, box-shadow 0.075s, transform 0.15s, width 0.15s, z-index 0s ease 0.15s;
+}
+.sidebar-toggler:hover{
+background-color: #0d6efd;
+}
+.sidebar-nav .nav-group.show .nav-group-toggle:hover{
+  color: #ffffff;
+}
+.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-full, .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-full {
+  background: #0d6efd !important;
+}

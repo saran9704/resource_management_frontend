@@ -1,0 +1,26 @@
+<div id="container">
+    <div class="heading">
+    <h4 class="secondarySkill">Fundamentals of Java</h4>
+    </div>
+    <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Universal Search">
+        </div>
+        <div class="col">
+          <select class="form-control" [(ngModel)]="questionType">
+            <option value="">All Types</option>
+            <option value="mcq">MCQ</option>
+            <option value="definition">Definition</option>
+          </select>
+        </div>
+        <div class="col">
+          <button class="sumbitBtn" (click)="addQuestion()">Add More Question</button>
+        </div>
+        <div class="col">
+          <button class="sumbitBtn" (click)="importFromExcel()">Import from Excel</button>
+        </div>
+      </div>
+  </div>
+  <div class="backbutton">
+    <button class="btn" (click)="backbutton()">Back</button>
+  </div>

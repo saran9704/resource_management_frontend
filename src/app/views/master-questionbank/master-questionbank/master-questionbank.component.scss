@@ -1,0 +1,195 @@
+.form-container {
+  // max-width: 700px;
+ display: flex;
+ justify-content:space-between;
+
+ 
+form {
+  display: flex;
+  // max-width: fit-content;
+ flex-direction: column;
+  // background-color: #81b3ff;
+  padding: 10px;
+  width: 100%;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  
+}
+ h4 {
+  text-align: start;
+  color: #0d6efd;
+  padding: 0px 20px 0px 0px;
+  margin-left: 1%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+}
+.form-control{
+  padding: 25px;
+  width:100%;
+  border:none;
+  outline:none;
+  span{
+    color:red;
+  }
+}
+ 
+}
+
+
+
+
+input,
+select {
+  margin: 5px 0;
+  padding: 10px;
+  // border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+
+  box-sizing: border-box;
+  border-color:#81b3ff !important;
+}
+input,select:focus{
+  outline-color: #0d6efd !important;
+}
+
+.text-danger {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap:10px;
+}
+
+.sumbitBtn {
+  padding: 7px 15px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+
+ 
+}
+.sumbitBtn:hover{
+  background-color: #88b2ef;
+  color:#fff;
+}
+.btn-group {
+  padding: 10px;
+}
+
+.btn-group .btn {
+  background-color: #fff;
+  padding: 12px 35px;
+  color: #0d6efd;
+  border: none;
+  outline: 1px solid rgb(148, 158, 183);
+  cursor: pointer;
+}
+
+.btn-group .btn:hover {
+  background-color: #88b2ef;
+  color: #fff;
+}
+
+.btn-group .btn.active {
+  background-color: #0d6efd !important;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #container{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+#container {
+  /* styles for the container */
+  // position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #f4eded;
+  overflow-y: scroll;
+ 
+  h4 {
+    text-align: start;
+    color: #0d6efd;
+    padding: 0px 10px 10px 10px;
+    margin-left: 1%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 600;
+  }
+  
+  .secondform{
+  margin-left: 50px;
+  
+  .row{
+    align-items: center;
+    
+input,
+select {
+  margin: 5px 0;
+  padding: 10px;
+  // border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border-color:#81b3ff !important;
+}
+input,select:focus{
+  outline-color: #0d6efd !important;
+}
+    .sumbitBtn {
+      padding: 7px 15px;
+      background-color: #0d6efd;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+    
+     
+    }
+  }
+  textarea{
+    width:100%;
+  }
+}
+
+}
+
+
+// .btn-group {
+//   padding: 10px;
+// }
+
+// .btn-group .btn {
+//   background-color: #fff;
+//   color: #0d6efd;
+//   outline: 1px solid rgb(148, 158, 183);
+// }
+
+// .btn-group .btn:hover {
+//   background-color: #88b2ef;
+//   color: #fff;
+// }
+
+// .btn-group .btn.active {
+//   background-color: #0d6efd !important;
+//   color: #fff;
+// }

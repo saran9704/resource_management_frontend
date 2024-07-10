@@ -1,0 +1,87 @@
+.header {
+  padding: 30px;
+  background-color: rgba(
+    var(--cui-light-rgb),
+    var(--cui-bg-opacity)
+  ) !important;
+}
+.zp-expand {
+  display: flex;
+  z-index: 99;
+}
+
+.zp-hmenu {
+  position: relative;
+  width: 2em;
+  height: 1em;
+  font-size: 15px;
+  cursor: pointer;
+  float: left;
+  margin: 2px 0px 0px 0px;
+}
+
+.zp-hmenu .item {
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: #555555a0;
+  border-radius: 4px;
+}
+
+.zp-hmenu .item:nth-child(1) {
+  top: 0;
+}
+
+.zp-hmenu .item:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+}
+
+.zp-expand.clicked .item:nth-child(2) {
+  left: -30%;
+}
+
+.zp-hmenu .item:nth-child(3) {
+  bottom: 0;
+}
+
+.ms-0 {
+  margin-top: -13px !important;
+}
+.dropdown[_nghost-ng-c1943810650]:not(.btn-group),
+.dropdown [_nghost-ng-c1943810650]:not(.btn-group),
+.dropup[_nghost-ng-c1943810650]:not(.btn-group),
+.dropup [_nghost-ng-c1943810650]:not(.btn-group) {
+  display: flex;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.user {
+  justify-content: center;
+  display: block;
+  align-items: center;
+  font-size: 12px;
+  height: 45px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  .username {
+    margin-top: 10px;
+  }
+}
+.select select {
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  // border-radius: 10%;
+  border: none;
+  outline: none;
+  background-color: #ffffffa0;
+  color: #666464;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-menu {
+  --cui-dropdown-link-active-bg: #0d6efd;
+}

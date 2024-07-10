@@ -1,0 +1,46 @@
+<!--sidebar-->
+<c-sidebar #sidebar="cSidebar" class="d-print-none sidebar sidebar-fixed" id="sidebar" visible>
+  <c-sidebar-brand [brandFull]="{
+      src: 'assets/img/avatars/Rmalogo.png',
+      width: 250,
+      height: 75,
+      alt: 'CoreUI Logo'}" 
+      [brandNarrow]="{
+        src: 'assets/img/avatars/Rmsfavicon.png',
+        width: 30,
+        height: 30,
+        alt: 'CoreUI Logo'
+      }"
+      routerLink="./"/>
+
+  <ng-scrollbar pointerEventsMethod="scrollbar">
+    <c-sidebar-nav [navItems]="navItems" dropdownMode="close" />
+  </ng-scrollbar>
+  <c-sidebar-toggler *ngIf="!sidebar.narrow" toggle="unfoldable" cSidebarToggle="sidebar" />
+</c-sidebar>
+
+<!--main-->
+<div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
+  <!--app-header-->
+  <app-default-header class="mb-4 d-print-none header header-sticky" position="sticky"
+    sidebarId="sidebar"></app-default-header>
+  <!--app-body-->
+  <div class="body flex-grow-1 px-3">
+    <div class="h-auto">
+      <div style="height: 73vh;
+    overflow-y: auto;
+    padding:5px 15px;
+    scroll-behavior: smooth;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.26);
+     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.26);">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+  <!--app footer-->
+  <app-default-footer></app-default-footer>
+</div>

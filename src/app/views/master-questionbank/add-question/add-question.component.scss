@@ -1,0 +1,264 @@
+.container {
+  padding: 20px;
+  overflow: auto;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.heading h3 {
+  color: #0d6efd;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.skillInputField {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.skillInputField label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: flex;
+}
+
+.skillInputField .danger {
+  color: red;
+  margin-left: 5px;
+}
+
+.skillInputField input {
+  padding: 8px;
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.skillInputField input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+}
+
+.questionContainer {
+  width: 75vw;
+  margin-top: 20px;
+  height: 40vh;
+  overflow: scroll;
+  border: 1px solid black;
+  padding: 20px;
+}
+.question {
+  margin-top: 20px;
+}
+.selectQuestionType {
+  display: flex;
+  flex-direction: column;
+}
+.selectQuestionType label {
+  font-weight: bold;
+}
+
+.selectQuestionType select {
+  width: 32%;
+  margin-left: 30px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.options {
+  margin-top: 20px;
+  width: 50vh;
+}
+
+.options label {
+  font-weight: bold;
+}
+
+.chooseOption {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chooseOption input[type="radio"] {
+  margin-right: 5px;
+}
+
+.chooseOption input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.chooseOption .removeOptionButton {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.addOptionButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.addOptionButton[disabled] {
+  background-color: #9fc6ff;
+  cursor: not-allowed;
+}
+.error {
+  color: red;
+  margin-top: 5px;
+}
+.removeOptionButton {
+  color: #dc3545;
+  display: flex;
+  font-size: medium;
+  margin-left: -10px;
+  cursor: pointer;
+}
+.removeOptionButton:not(.chooseOption) {
+  display: flex;
+}
+
+.question {
+  margin-top: 20px;
+  width: 50vh;
+}
+.questionField {
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+}
+.question label {
+  font-weight: bold;
+}
+
+.question input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.textarea {
+  margin-top: 20px;
+}
+
+.textarea label {
+  font-weight: bold;
+}
+
+.textarea textarea {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+footer {
+    margin-top: 20px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .addQuestionButton {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .pagination button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  footer button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer button.cancelButton {
+    background-color: #0d6efd;
+  }
+  
+  footer button:hover {
+    background-color: #265eab;
+  }
+  
+
+/* Media Queries for Mobile Responsiveness */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .skillInputField {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skillInputField label {
+    margin-bottom: 5px;
+  }
+
+  .skillInputField input {
+    width: 100%;
+  }
+  .chooseOption {
+    flex-direction: column;
+  }
+
+  .chooseOption input[type="text"] {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}

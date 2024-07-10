@@ -1,0 +1,85 @@
+<div class="form-container">
+    <form [formGroup]="questionbank">
+      <h4>Master Question Bank</h4>
+      <div class="form-control">
+        <div class="row">
+          <div class="col">
+            <label for="primarySkill">Primary skills</label><span>*</span>
+            <select name="" id="" formControlName="primarySkill">
+              <option value="">Select</option>
+              <option value="primarySkill" *ngFor="let p of primarySkills">{{p}}</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="secondarySkill">Secondary skills</label><span>*</span>
+            <select name="" id="" formControlName="secondarySkill" [(ngModel)]="secondarySkillShow" (change)="SelectSecondarySkill()">
+              <option value="">Select</option>
+              <option value="all">All</option>
+              <option value="secondarySkill" *ngFor="let s of secondarySkills"  >{{s.name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="client">Client</label><span>*</span>
+            <select name="" id="" style="width:49%;display: flex" formControlName="client" >
+              <option value="">Select</option>
+              <option value="all">All</option>
+              <option value="client" *ngFor="let c of clients">{{c}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="buttons">
+            <button type="button" class="sumbitBtn" (click)="resetForm()">Reset</button>
+            <button type="button" class="sumbitBtn" (click)="View()">View</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+
+<div id="container" *ngIf="questionData">
+    <div class="heading">
+    <h4 class="secondarySkill">Introduction to Angular</h4>
+    </div>
+    <div class="secondform">
+        <div class="row">
+            <div class="col-3">
+              <input type="text" placeholder="Universal Search">
+            </div>
+            <div class="col-3">
+              <select  [(ngModel)]="questionType">
+                <option value="">select</option>
+                <option value="mcq">MCQ</option>
+                <option value="definition">Definition</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <button class="sumbitBtn" (click)="addQuestion()">Add More Question</button>
+            </div>
+            <div class="col-3">
+              <button class="sumbitBtn" (click)="importFromExcel()">Import from Excel</button>
+            </div>
+          </div>
+          <div *ngIf="questionType === 'mcq'">
+           
+            <div class="row">
+              <div class="col">
+                <textarea  rows="6" cols="5">{{ mcqQuestion }}</textarea>
+              </div>
+            </div>
+          </div>
+      
+          <div *ngIf="questionType === 'definition'">
+          
+            <div class="row">
+              <div class="col">
+                <textarea  rows="6" cols="5" >{{definintion}}</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  

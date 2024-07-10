@@ -1,0 +1,135 @@
+.form-container {
+  // max-width: 700px;
+ display: flex;
+ justify-content:space-between;
+ 
+}
+
+form {
+  display: flex;
+  // max-width: fit-content;
+  width: 100%;
+ flex-direction: column;
+  // background-color: #81b3ff;
+  padding: 10px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  
+}
+.form{
+  margin-top: 1%;
+}
+
+h4 {
+  text-align: flex-start;
+  color: #0d6efd;
+  padding: 20px;
+  margin-left: 1%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.gif {
+  // padding: 0 20px;
+  // flex-basis: 100%;
+  // text-align: center;
+  // margin-top:1px ;
+margin-right: 400px;
+}
+
+.gif img {
+  max-width: 20%;
+  height: auto;
+}
+
+input,
+select {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input,select:focus{
+  outline-color: #81b3ff !important;
+}
+
+.text-danger {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.sumbitBtn {
+  padding: 12px 35px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10%;
+
+ 
+}
+.sumbitBtn:hover{
+  background-color: #88b2ef;
+  color:#fff;
+}
+.btn-group {
+  padding: 10px;
+}
+
+.btn-group .btn {
+  background-color: #fff;
+  padding: 12px 35px;
+  color: #0d6efd;
+  border: none;
+  outline: 1px solid rgb(148, 158, 183);
+  cursor: pointer;
+}
+
+.btn-group .btn:hover {
+  background-color: #88b2ef;
+  color: #fff;
+}
+
+.btn-group .btn.active {
+  background-color: #0d6efd !important;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+// .btn-group {
+//   padding: 10px;
+// }
+
+// .btn-group .btn {
+//   background-color: #fff;
+//   color: #0d6efd;
+//   outline: 1px solid rgb(148, 158, 183);
+// }
+
+// .btn-group .btn:hover {
+//   background-color: #88b2ef;
+//   color: #fff;
+// }
+
+// .btn-group .btn.active {
+//   background-color: #0d6efd !important;
+//   color: #fff;
+// }

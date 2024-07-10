@@ -1,0 +1,35 @@
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" [ngClass]="{ 'active': isRouteActive('dashboard/forms/jd-form') }" 
+  class="btn button-primary" (click)="jobrouting()">Job Description</button>
+  <button type="button" [ngClass]="{ 'active': isRouteActive('dashboard/forms/skill-evaluation-form') }"
+   class="btn button-primary" (click)="skillrouting()">Skill Evaluation</button> 
+</div>
+
+<div class="form-container">
+
+  <div class="form">
+ 
+  <form [formGroup]="jobForm">
+    <h4> Job Description</h4>
+    <div class="inputs">
+    <!-- <input formControlName="jobDescription" placeholder="Enter job description"> -->
+    <textarea formControlName="jobDescription" [(ngModel)]="jdData"
+     placeholder="Enter description..."  id="" cols="25" rows="5" minlength="4" maxLength="250">
+     {{ jobDescriptionService.getJobDescription() }}</textarea>
+     <br>
+     <span class="text-danger"
+     *ngIf="register['jobDescription']?.touched && register['jobDescription']?.errors?.['required']">*Description is
+     mandatory should not exceed 250 characters</span>
+    <span class="text-danger"
+     *ngIf="register['jobDescription']?.touched && register['jobDescription']?.errors?.['pattern']">*No special characters
+     allowed</span>  
+    </div>
+    <div class="buttons">
+      <button type="button" class="sumbitBtn" [disabled]="jobForm.invalid"  (click)="next()">Next</button>
+    </div>
+  </form>
+</div>
+<div class="gif">
+  <img src="../../../../assets/img/brand/03-Virtual-Service.gif"  alt="GIF Preview" />
+</div>
+</div>

@@ -1,0 +1,166 @@
+
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" [ngClass]="{ 'active': isRouteActive('dashboard/forms/jd-form') }" 
+    class="btn button-primary" (click)="jobrouting()">Job Description</button>
+    <button type="button" [ngClass]="{ 'active': isRouteActive('dashboard/forms/skill-evaluation-form') }" 
+    class="btn button-primary" (click)="skillrouting()">Skill Evaluation</button>
+     
+  </div>
+
+
+<div class="form-container">
+
+ <div class="form">
+  
+    <form [formGroup]="evaluationForm">
+      <h4>Skill Evaluation</h4>
+     <div class="row">
+      <div class="col">
+        <div class="inputs">
+          <label for="name">Name:</label>
+          <input type="text" id="name" formControlName="name"  placeholder="Enter name" >
+          <br>
+          <span class="text-danger"
+       *ngIf="register['name']?.touched && register['name']?.errors?.['required']">*Name is
+       mandatory </span>
+      <span class="text-danger"
+       *ngIf="register['name']?.touched && register['name']?.errors?.['pattern']">*No special characters
+       allowed</span>
+        </div>
+      </div>
+      <div class="col">
+        <label>Email:</label>
+        <input type="text" id="email" formControlName="email" placeholder="Enter email...">
+      </div>
+  
+
+      </div>
+   
+   
+   
+     <div class="row">
+
+   <div class="col">
+    <div class="inputs">
+      <label for="communicationSkills">Communication Skills:</label>
+      <input type="number" id="communicationSkills" formControlName="communicationSkills" placeholder="Enter communication skills (out of 5)">
+    </div>
+   </div>
+
+   <div class="col">
+    <div class="inputs">
+      <label for="programmingSkills">Programming Skills:</label>
+      <input type="number" id="programmingSkills" formControlName="programmingSkills" placeholder="Enter programming skills (out of 5)">
+    </div>
+  </div>
+ 
+   </div>
+    
+   <div class="row">
+    <div class="col">
+      <div class="inputs">
+        <label for="problemSolvingSkills">Problem Solving Skills:</label>
+        <input type="number" id="problemSolvingSkills" formControlName="problemSolvingSkills" placeholder="Enter problem-solving skills (out of 5)">
+      </div>
+     </div>
+    <div class="col">
+      <div class="inputs" >
+        <label for="totalScore">Total Score:</label>
+        <input type="number" id="totalScore" formControlName="totalScore" [readonly]="true">
+      </div>
+    </div>
+    
+   </div>
+   <div class="row">
+    <div class="col">
+         <div class="buttons">
+        <!-- <button (click)="goToPrevious()">Back</button> -->
+        <button type="button" class="sumbitBtn" (click)="submit()">Submit</button>
+      </div>
+    </div>
+   </div>
+   
+  
+
+    
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="inputs">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name"  placeholder="Enter name"/>
+    <br>
+    <span class="text-danger"
+ *ngIf="register['name']?.touched && register['name']?.errors?.['required']">*Name is
+ mandatory </span>
+<span class="text-danger"
+ *ngIf="register['name']?.touched && register['name']?.errors?.['pattern']">*No special characters
+ allowed</span>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+ 
